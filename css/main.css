@@ -1,1 +1,425 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@font-face {
+  src: url(../fonts/GothaProBla.otf);
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  src: url(../fonts/GothaProBol.otf);
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  src: url(../fonts/GothaProReg.otf);
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(../fonts/UniversLTCYR-55Roman.ttf);
+  font-family: 'Univers LT';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(../fonts/UniversLTCYR-45Light.ttf);
+  font-family: 'Univers LT';
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  src: url(../fonts/UniversLTCYR-55Roman.ttf);
+  font-family: 'Univers LT';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(../fonts/UniversLTCYR-85XBlack.ttf);
+  font-family: 'Univers LT';
+  font-style: normal;
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Univers LT', serif;
+  background-color: #f6f6fa;
+  color: #1c1c20;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+section {
+  padding: 100px 0 0;
+}
+
+.navigation {
+  position: absolute;
+  padding: 35px 0;
+  width: 100%;
+}
+
+.navigation .container {
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navigation .logo-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation .logo-switch .logo img {
+  width: 150px;
+  padding-right: 30px;
+}
+
+.navigation .logo-switch .switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation .logo-switch .switch input[type="checkbox"] {
+  position: relative;
+  width: 70px;
+  height: 35px;
+  -webkit-appearance: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: 2px 0 14px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 0 14px rgba(0, 0, 0, 0.2);
+}
+
+.navigation .logo-switch .switch input[type="checkbox"]:checked {
+  background-color: #101012;
+}
+
+.navigation .logo-switch .switch input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  top: 0;
+  left: 2px;
+  background-color: #101012;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.navigation .logo-switch .switch input:checked[type="checkbox"]:before {
+  left: 35px;
+  background-color: #fff;
+}
+
+.navigation .link-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation .link-menu a {
+  font-size: 22px;
+  color: #1c1c20;
+  padding-bottom: 5px;
+  text-decoration: none;
+  border-bottom: 2px solid #1c1c20;
+}
+
+.navigation .link-menu img {
+  width: 70px;
+  margin-left: 40px;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .row {
+  position: relative;
+}
+
+header .hero-text h1 {
+  font-family: 'Gotham Pro', serif;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 77px;
+}
+
+header .hero-text p {
+  padding-left: 100px;
+  margin-top: 50px;
+}
+
+header .hero-img {
+  position: relative;
+}
+
+header .hero-img img {
+  position: absolute;
+  max-width: 100%;
+}
+
+header .hero-img .lupa {
+  z-index: 99;
+  bottom: -160px;
+  left: 200px;
+}
+
+header .hero-img .zavr {
+  z-index: 98;
+  bottom: -170px;
+  left: 75px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+header .hero-img .clock {
+  z-index: 98;
+  width: 80px;
+  bottom: -20px;
+  left: 80px;
+}
+
+header .hero-img .hand-bat {
+  z-index: 98;
+  left: -45px;
+  top: 110px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  animation-direction: reverse;
+  transform-origin: center center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 9999;
+          animation-iteration-count: 9999;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+header .hero-img .david {
+  z-index: 97;
+  left: 100px;
+}
+
+header .hero-img .dron {
+  z-index: 96;
+  top: 40px;
+  right: 10px;
+}
+
+header .hero-img .nlo {
+  z-index: 96;
+  top: -70px;
+  right: 70px;
+}
+
+header .hero-img .planeta {
+  z-index: 95;
+  width: 180px;
+  top: -30px;
+  right: 80px;
+  -webkit-animation-name: rotation;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotation;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -o-animation-name: rotation;
+  -o-animation-duration: 5s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+  animation-name: rotation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+header .hero-img .delorian {
+  z-index: 95;
+  right: 90px;
+  bottom: -30px;
+}
+
+header .hero-img .rob-heart {
+  z-index: 94;
+  top: 190px;
+  left: 70px;
+}
+
+header .social {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  right: -0;
+  top: 150px;
+}
+
+header .social a {
+  color: #101012;
+  margin-bottom: 20px;
+}
+
+header .social i {
+  font-size: 18px;
+}
+
+header .scroll {
+  font-size: 14px;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 23px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  z-index: 999;
+  bottom: 100px;
+  left: 45%;
+}
+
+header .point {
+  position: absolute;
+  z-index: 999;
+  width: 12px;
+  bottom: 40px;
+  left: 49%;
+}
+
+#work {
+  background-color: #fff;
+}
+
+#work h2 {
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70px;
+  margin-bottom: 40px;
+  padding-left: 5%;
+}
+
+#work p {
+  padding-left: 15%;
+}
+
+#work .work-row .work-item {
+  padding: 0 50px 50px 0;
+  margin-top: 50px;
+}
+
+#work .work-row .work-item:nth-child(2n) {
+  margin-top: 130px;
+  padding: 0 0 0 50px;
+}
+
+#work .work-row .work-item img {
+  max-width: 100%;
+}
+
+#work a {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 25px;
+  font-size: 22px;
+  line-height: 100px;
+  color: #1c1c20;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+#work a:hover {
+  background-color: #e3ecff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#work a img {
+  width: 50px;
+  margin-left: 25px;
+}
+
+#idea {
+  overflow: hidden;
+}
+
+#idea .runtext {
+  width: 320%;
+}
+
+#idea .runtext .runline {
+  font-size: 320px;
+  font-family: 'Gotham Pro', serif;
+  font-weight: 900;
+  color: #f6f6fa;
+  -webkit-text-stroke: 2px #1c1c20;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,354 @@
+// Fonts Gotham Pro
+@font-face {
+    src: url(../fonts/GothaProBla.otf);
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 900;
+}
+@font-face {
+    src: url(../fonts/GothaProBol.otf);
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    src: url(../fonts/GothaProReg.otf);
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+}
+
+//Fonts Univers LT
+@font-face {
+    src: url(../fonts/UniversLTCYR-55Roman.ttf);
+    font-family: 'Univers LT';
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    src: url(../fonts/UniversLTCYR-45Light.ttf);
+    font-family: 'Univers LT';
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    src: url(../fonts/UniversLTCYR-55Roman.ttf);
+    font-family: 'Univers LT';
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    src: url(../fonts/UniversLTCYR-85XBlack.ttf);
+    font-family: 'Univers LT';
+    font-style: normal;
+    font-weight: 700;
+}
+
+//Variables
+$darkBg: #101012;
+$lightBg: #f6f6fa;
+$whiteColor: #fff;
+$shadowDark: rgba(0,0,0,.2);
+$textColor: #1c1c20;
+$blobColor: #0055fe;
+
+//Main styles
+body {
+    font-family: 'Univers LT', serif;
+    background-color: $lightBg;
+    color: $textColor;
+    font-weight: 400;
+    font-size: 30px;
+}
+.container {
+    max-width: 1200px;
+}
+section {
+    padding: 100px 0 0;
+}
+
+//Nav
+.navigation {
+    position: absolute;
+    padding: 35px 0;
+    width: 100%;
+    .container {
+        max-width: 1280px;    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo-switch {
+        display: flex;
+        align-items: center;
+        .logo {
+            img {
+                width: 150px;
+                padding-right: 30px;
+            }
+        }
+        .switch {
+            display: flex;
+            align-items: center;
+            input[type="checkbox"] {
+                position: relative;
+                width: 70px;
+                height: 35px;
+                -webkit-appearance: none;
+                outline: none;
+                background-color: $whiteColor;
+                border-radius: 20px;
+                transition: .5s;
+                box-shadow: 2px 0 14px $shadowDark;
+                &:checked {
+                    background-color: $darkBg;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 20px;
+                    top: 0;
+                    left: 2px;
+                    background-color: $darkBg;
+                    transition: .5s;
+                    transform: scale(0.8);
+                }
+            }
+            input:checked[type="checkbox"]:before {
+                left: 35px;
+                background-color: $whiteColor;
+            }
+        }
+    }
+    .link-menu {
+        display: flex;
+        align-items: center;
+        a {
+            font-size: 22px;
+            color: $textColor;
+            padding-bottom: 5px;
+            text-decoration: none;
+            border-bottom: 2px solid $textColor;
+        }
+        img {
+            width: 70px;
+            margin-left: 40px;
+        }
+    }
+}
+
+//header
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .row {
+        position: relative;
+    }
+    .hero-text {
+        h1 {
+            font-family:'Gotham Pro', serif;
+            font-size: 80px;
+            font-weight: 900;
+            line-height: 77px;
+        }
+        p {
+            padding-left: 100px;
+            margin-top: 50px;
+        }
+    }
+    .hero-img {
+        position: relative;
+        img {
+            position: absolute;
+            max-width: 100%;
+        }
+        .lupa {
+            z-index: 99;
+            bottom: -160px;
+            left: 200px;
+        }
+        .zavr {
+            z-index: 98;
+            bottom: -170px;
+            left: 75px;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-transform-origin: center center;
+            -ms-transform-origin: center center;
+            transform-origin: center center;
+            -webkit-animation-name: swing;
+            animation-name: swing;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .clock {
+            z-index: 98;
+            width: 80px;
+            bottom: -20px;
+            left: 80px;
+        }
+        .hand-bat {
+            z-index: 98;
+            left: -45px;
+            top: 110px;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-transform-origin: center center;
+            -ms-transform-origin: center center;
+            animation-direction: reverse;
+            transform-origin: center center;
+            -webkit-animation-name: swing;
+            animation-name: swing;
+            animation-duration: 2s;
+            animation-iteration-count: 9999;
+            animation-timing-function: linear;
+        }
+        .david {
+            z-index: 97;
+            left: 100px;
+        }
+        .dron {
+            z-index: 96;
+            top: 40px;
+            right: 10px;
+        }
+        .nlo {
+            z-index: 96;
+            top: -70px;
+            right: 70px;
+        }
+        .planeta {
+            z-index: 95;
+            width: 180px;
+            top: -30px;
+            right: 80px;
+            -webkit-animation-name: rotation;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -moz-animation-name: rotation;
+            -moz-animation-duration: 5s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+            -o-animation-name: rotation;
+            -o-animation-duration: 5s;
+            -o-animation-iteration-count: infinite;
+            -o-animation-timing-function: linear;
+            animation-name: rotation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .delorian {
+            z-index: 95;
+            right: 90px;
+            bottom: -30px;
+        }
+        .rob-heart {
+            z-index: 94;
+            top: 190px;
+            left: 70px;
+        }
+    }
+    .social {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        right: -0;
+        top: 150px;
+        a {
+            color: $darkBg;
+            margin-bottom: 20px;
+        }
+        i {
+            font-size: 18px;
+        }
+    }
+    .scroll {
+        font-size: 14px;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        line-height: 23px;
+        transform: rotate(-90deg);
+        position: absolute;
+        z-index: 999;
+        bottom: 100px;
+        left: 45%;
+    }
+    .point {
+        position: absolute;
+        z-index: 999;
+        width: 12px;
+        bottom: 40px;
+        left: 49%;
+    }
+}
+#work {
+    background-color: $whiteColor;
+    h2 {
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 70px;
+        margin-bottom: 40px;
+        padding-left: 5%;
+    }
+    p {
+        padding-left: 15%;
+    }
+    .work-row {
+        .work-item {
+            padding: 0 50px 50px 0;
+            margin-top: 50px;
+            &:nth-child(2n) {
+                margin-top: 130px;
+                padding: 0 0 0 50px;
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    a {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-left: 25px;
+        font-size: 22px;
+        line-height: 100px;
+        color: $textColor;
+        text-decoration: none;
+        border-radius: 50px;
+        &:hover {
+            background-color: #e3ecff;
+            transition: .5s;
+        }
+        img {
+            width: 50px;
+            margin-left: 25px;
+        }
+    }
+}
+#idea {
+    overflow: hidden;
+    .runtext {
+        width: 320%;
+        .runline {
+            font-size: 320px;
+            font-family: 'Gotham Pro', serif;
+            font-weight: 900;
+            color: $lightBg;
+            -webkit-text-stroke: 2px $textColor;
+            // text-shadow: 1px 0 1px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;;
+        }
+    }
+}
