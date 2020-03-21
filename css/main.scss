@@ -51,6 +51,16 @@ $whiteColor: #fff;
 $shadowDark: rgba(0,0,0,.2);
 $textColor: #1c1c20;
 $blobColor: #0055fe;
+$bdColor: #cacace;
+
+//Mixins
+@mixin secTitle {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 70px;
+    margin-bottom: 40px;
+    padding-left: 5%;
+}
 
 //Main styles
 body {
@@ -61,10 +71,52 @@ body {
     font-size: 30px;
 }
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
 }
 section {
     padding: 100px 0 0;
+}
+a {
+    color: $textColor;
+    &:hover {
+        color: $textColor;
+    }
+}
+
+//Pointer
+.pointer {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    .pointer__circle {
+        position: absolute;
+        top: 50%;
+        transform: scale(1) translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        // background: $blobColor;
+        border: 1px solid $darkBg;
+        border-radius: 50%;
+        transition: all .5s cubic-bezier(.37, .01, 0, .98)
+    }
+}
+.pointer.hide {
+    .pointer__circle {
+        transition: all .3s;
+        background: $blobColor;
+        border: none;
+        opacity: .2;
+        width: 60px;
+        height: 60px
+    }
 }
 
 //Nav
@@ -73,7 +125,7 @@ section {
     padding: 35px 0;
     width: 100%;
     .container {
-        max-width: 1280px;    
+        max-width: 95%;    
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -127,7 +179,6 @@ section {
         align-items: center;
         a {
             font-size: 22px;
-            color: $textColor;
             padding-bottom: 5px;
             text-decoration: none;
             border-bottom: 2px solid $textColor;
@@ -175,18 +226,18 @@ header {
             z-index: 98;
             bottom: -170px;
             left: 75px;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-            -webkit-transform-origin: center center;
-            -ms-transform-origin: center center;
-            transform-origin: center center;
-            -webkit-animation-name: swing;
-            animation-name: swing;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
+            // -webkit-animation-duration: 1s;
+            // animation-duration: 1s;
+            // -webkit-animation-fill-mode: both;
+            // animation-fill-mode: both;
+            // -webkit-transform-origin: center center;
+            // -ms-transform-origin: center center;
+            // transform-origin: center center;
+            // -webkit-animation-name: swing;
+            // animation-name: swing;
+            // animation-duration: 3s;
+            // animation-iteration-count: infinite;
+            // animation-timing-function: linear;
         }
         .clock {
             z-index: 98;
@@ -198,19 +249,19 @@ header {
             z-index: 98;
             left: -45px;
             top: 110px;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-            -webkit-transform-origin: center center;
-            -ms-transform-origin: center center;
-            animation-direction: reverse;
-            transform-origin: center center;
-            -webkit-animation-name: swing;
-            animation-name: swing;
-            animation-duration: 2s;
-            animation-iteration-count: 9999;
-            animation-timing-function: linear;
+            // -webkit-animation-duration: 1s;
+            // animation-duration: 1s;
+            // -webkit-animation-fill-mode: both;
+            // animation-fill-mode: both;
+            // -webkit-transform-origin: center center;
+            // -ms-transform-origin: center center;
+            // animation-direction: reverse;
+            // transform-origin: center center;
+            // -webkit-animation-name: swing;
+            // animation-name: swing;
+            // animation-duration: 2s;
+            // animation-iteration-count: 9999;
+            // animation-timing-function: linear;
         }
         .david {
             z-index: 97;
@@ -267,7 +318,6 @@ header {
         right: -0;
         top: 150px;
         a {
-            color: $darkBg;
             margin-bottom: 20px;
         }
         i {
@@ -297,14 +347,10 @@ header {
 #work {
     background-color: $whiteColor;
     h2 {
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 70px;
-        margin-bottom: 40px;
-        padding-left: 5%;
+        @include secTitle();
     }
     p {
-        padding-left: 15%;
+        padding-left: 20%;
     }
     .work-row {
         .work-item {
@@ -324,8 +370,6 @@ header {
         margin-bottom: 50px;
         padding-left: 25px;
         font-size: 22px;
-        line-height: 100px;
-        color: $textColor;
         text-decoration: none;
         border-radius: 50px;
         &:hover {
@@ -340,15 +384,91 @@ header {
 }
 #idea {
     overflow: hidden;
-    .runtext {
-        width: 320%;
+    .parallax-text {
+        width: 165%;
+        height: 320px;
         .runline {
             font-size: 320px;
+            line-height: 160px;
             font-family: 'Gotham Pro', serif;
             font-weight: 900;
             color: $lightBg;
             -webkit-text-stroke: 2px $textColor;
-            // text-shadow: 1px 0 1px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;;
+        }
+    }
+}
+#getStart {
+    .info {
+        display: flex;
+        flex-flow: column;
+        h2 {
+            @include secTitle();
+        }
+        p {
+            padding-left: 20%;
+        }
+        a {
+            width: 267px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 18%;
+            font-size: 22px;
+            color: $blobColor;
+            padding-left: 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            &:hover {
+                background-color: #e3ecff;
+                color: $textColor;
+                transition: .5s;
+            }
+            img {
+                width: 50px;
+                margin-left: 25px;
+            }
+        }
+    }
+}
+
+footer {
+    border-top: 2px solid $bdColor;
+    padding: 50px 0 25px;
+    .container {
+        max-width: 95%;
+        .copyright {
+            font-size: 16px;
+            font-family: 'Gotham Pro', serif;
+            font-weight: 400;
+        }
+    }
+    .foot-logo {
+        padding: 0;
+        img {
+            width: 150px;
+        }
+    }
+    .foot-menu {
+        display: flex;
+        align-items: flex-end;
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            list-style: none;
+            font-size: 22px;
+        }
+    }
+    .foot-contacts {
+        display: flex;
+        flex-flow: column;
+        text-align: right;
+        font-size: 22px;
+        h3 {
+            font-family: 'Gotham Pro', serif;
+            font-weight: 700;
+        }
+        a {
+            text-decoration: underline;
         }
     }
 }

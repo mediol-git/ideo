@@ -56,11 +56,56 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 section {
   padding: 100px 0 0;
+}
+
+a {
+  color: #1c1c20;
+}
+
+a:hover {
+  color: #1c1c20;
+}
+
+.pointer {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+}
+
+.pointer .pointer__circle {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: scale(1) translateY(-50%);
+          transform: scale(1) translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #101012;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s cubic-bezier(0.37, 0.01, 0, 0.98);
+  transition: all 0.5s cubic-bezier(0.37, 0.01, 0, 0.98);
+}
+
+.pointer.hide .pointer__circle {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background: #0055fe;
+  border: none;
+  opacity: .2;
+  width: 60px;
+  height: 60px;
 }
 
 .navigation {
@@ -70,7 +115,7 @@ section {
 }
 
 .navigation .container {
-  max-width: 1280px;
+  max-width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,7 +199,6 @@ section {
 
 .navigation .link-menu a {
   font-size: 22px;
-  color: #1c1c20;
   padding-bottom: 5px;
   text-decoration: none;
   border-bottom: 2px solid #1c1c20;
@@ -211,20 +255,6 @@ header .hero-img .zavr {
   z-index: 98;
   bottom: -170px;
   left: 75px;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-transform-origin: center center;
-  transform-origin: center center;
-  -webkit-animation-name: swing;
-  animation-name: swing;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 
 header .hero-img .clock {
@@ -238,22 +268,6 @@ header .hero-img .hand-bat {
   z-index: 98;
   left: -45px;
   top: 110px;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
-  animation-direction: reverse;
-  transform-origin: center center;
-  -webkit-animation-name: swing;
-  animation-name: swing;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: 9999;
-          animation-iteration-count: 9999;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 
 header .hero-img .david {
@@ -325,7 +339,6 @@ header .social {
 }
 
 header .social a {
-  color: #101012;
   margin-bottom: 20px;
 }
 
@@ -360,7 +373,7 @@ header .point {
 }
 
 #work h2 {
-  font-size: 75px;
+  font-size: 72px;
   font-weight: 700;
   line-height: 70px;
   margin-bottom: 40px;
@@ -368,7 +381,7 @@ header .point {
 }
 
 #work p {
-  padding-left: 15%;
+  padding-left: 20%;
 }
 
 #work .work-row .work-item {
@@ -390,8 +403,6 @@ header .point {
   margin-bottom: 50px;
   padding-left: 25px;
   font-size: 22px;
-  line-height: 100px;
-  color: #1c1c20;
   text-decoration: none;
   border-radius: 50px;
 }
@@ -411,15 +422,128 @@ header .point {
   overflow: hidden;
 }
 
-#idea .runtext {
-  width: 320%;
+#idea .parallax-text {
+  width: 165%;
+  height: 320px;
 }
 
-#idea .runtext .runline {
+#idea .parallax-text .runline {
   font-size: 320px;
+  line-height: 160px;
   font-family: 'Gotham Pro', serif;
   font-weight: 900;
   color: #f6f6fa;
   -webkit-text-stroke: 2px #1c1c20;
+}
+
+#getStart .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+#getStart .info h2 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 70px;
+  margin-bottom: 40px;
+  padding-left: 5%;
+}
+
+#getStart .info p {
+  padding-left: 20%;
+}
+
+#getStart .info a {
+  width: 267px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 18%;
+  font-size: 22px;
+  color: #0055fe;
+  padding-left: 20px;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+#getStart .info a:hover {
+  background-color: #e3ecff;
+  color: #1c1c20;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#getStart .info a img {
+  width: 50px;
+  margin-left: 25px;
+}
+
+footer {
+  border-top: 2px solid #cacace;
+  padding: 50px 0 25px;
+}
+
+footer .container {
+  max-width: 95%;
+}
+
+footer .container .copyright {
+  font-size: 16px;
+  font-family: 'Gotham Pro', serif;
+  font-weight: 400;
+}
+
+footer .foot-logo {
+  padding: 0;
+}
+
+footer .foot-logo img {
+  width: 150px;
+}
+
+footer .foot-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer .foot-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  font-size: 22px;
+}
+
+footer .foot-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  text-align: right;
+  font-size: 22px;
+}
+
+footer .foot-contacts h3 {
+  font-family: 'Gotham Pro', serif;
+  font-weight: 700;
+}
+
+footer .foot-contacts a {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */

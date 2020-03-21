@@ -18,11 +18,11 @@
                     <img src="img/logo_black.png" alt="">
                 </div>
                 <div class="switch">
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="" id="" class="hoverable">
                 </div>
             </div>
             <div class="link-menu">
-                <a href="#" class="start-project">Начать проект</a>
+                <a href="#" class="start-project hoverable">Начать проект</a>
                 <img src="img/menu.png" alt="Кнопка меню">
             </div>
         </div>
@@ -47,9 +47,9 @@
                     <img src="img/cklock.png" alt="Часы карманные" class="clock">
                 </div>
                 <div class="social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-behance"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hoverable"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hoverable"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="hoverable"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -78,23 +78,67 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <a href="portfolio.html" target="_blank">Смотреть еще работы <img src="img/plus.svg" alt=""></a>
+                <a href="portfolio.html" class="hoverable" target="_blank">Смотреть еще работы <img src="img/plus.svg" alt=""></a>
             </div>
         </div>
     </section>
-    <section id="idea">
+    <section id="idea" class="parallax">
+        <div class="parallax-layer parallax-text">
+            <p class="runline">есть крутая идея?</p>
+        </div>
+    </section>
+    <section id="getStart">
         <div class="container">
-            <div class="row runtext">
-                <p class="runline">есть крутая идея?</p>
+            <div class="row">
+                <div class="col-lg-8 info">
+                    <h2>давайте создадим что-то важное вместе</h2>
+                    <p>Свяжитесь с нами сегодня, чтобы начать работать над вашими результатами! Мы хотели бы узнать больше о вашем проекте.</p>
+                    <a href="#" class="hoverable" target="_blank">Начать проект! <img src="img/plus.svg" alt=""></a>
+                </div>
+                <div class="col-lg-4">
+
+                </div>
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 foot-logo">
+                    <img src="img/logo_black.png" alt="">
+                </div>
+                <div class="col-lg-4 foot-menu">
+                    <ul>
+                        <a href="#" class="hoverable"><li>Behance</li></a>
+                        <a href="#" class="hoverable"><li>Facebook</li></a>
+                        <a href="#" class="hoverable"><li>Instagram</li></a>
+                        <a href="#" class="hoverable"><li>Telegram</li></a>
+                    </ul>
+                </div>
+                <div class="col-lg-4 foot-contacts">
+                    <h3>Связаться с нами</h3>
+                    <a href="mailto:info@ideoagency.com" class="hoverable">info@ideoagency.com</a>
+                    <p>+79998768789</p>
+                </div>
+            </div>
+            <div class="row">
+                <p class="copyright">All Rights Reserved. All Wrongs Reversed.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="js-pointer pointer">
+        <div class="pointer__circle"></div>
+   </div>
 
 
 
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="js/pointer.js"></script>
     <script src="https://kit.fontawesome.com/bfb0265f6e.js" crossorigin="anonymous"></script>
 </body>
 </html>
