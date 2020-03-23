@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/fav.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/blobs.css">
-    <title>Ideo</title>
+    <title>Ideo - интернет-маркетинг и разработка сайтов</title>
 </head>
 <body>
     <nav class="navigation">
@@ -23,10 +24,25 @@
             </div>
             <div class="link-menu">
                 <a href="#" class="start-project hoverable">Начать проект</a>
-                <img src="img/menu.png" alt="Кнопка меню">
+                <label for="menuBlock"><img src="img/menu.png" alt="Кнопка меню"></label>
             </div>
         </div>
     </nav>
+    <input type="checkbox" id="menuBlock">
+    <div id="menu">
+        <div class="container">
+            <div class="row menu-items">
+                <ul>
+                    <a href="#" class="hoverable"><li>Главная</li></a>
+                    <a href="#" class="hoverable"><li>О компании</li></a>
+                    <a href="#" class="hoverable"><li>Наши проекты</li></a>
+                    <a href="#" class="hoverable"><li>Карьера</li></a>
+                    <a href="#" class="hoverable"><li>Контакты</li></a>
+                </ul>
+            </div>
+        </div>
+        <label for="menuBlock"><img src="img/close.png" alt="Кнопка закрыть меню"></label>
+    </div>
     <header id="hero">
         <div class="container">
             <div class="row">
@@ -36,14 +52,14 @@
                 </div>
                 <div class="col-lg-6 hero-img">
                     <img src="img/David.png" alt="Давид" class="david">
-                    <img src="img/delorian.png" alt="Машина времени" class="delorian">
-                    <img src="img/dron.png" alt="Дрон" class="dron">
-                    <img src="img/RoboHand-i-babochka.png" alt="Рука робота и бабочка" class="hand-bat">
-                    <img src="img/RoboHeart.png" alt="Серце робота" class="rob-heart">
-                    <img src="img/lupa.png" alt="Лупа" class="lupa">
-                    <img src="img/nlo.png" alt="НЛО" class="nlo">
-                    <img src="img/planeta.png" alt="Планета" class="planeta">
-                    <img src="img/tiranozavr.png" alt="Тиранозавр" class="zavr">
+                    <img src="img/delorian.png" alt="Машина времени" class="delorian animated slideInLeft delay-2s">
+                    <img src="img/dron.png" alt="Дрон" class="dron animated fadeInRight delay-3s">
+                    <img src="img/RoboHand-i-babochka.png" alt="Рука робота и бабочка" class="hand-bat animated">
+                    <img src="img/RoboHeart.png" alt="Серце робота" class="rob-heart animated pulse infinite">
+                    <img src="img/lupa.png" alt="Лупа" class="lupa animated fadeIn delay-1s">
+                    <img src="img/nlo.png" alt="НЛО" class="nlo animated fadeInUp delay-4s">
+                    <img src="img/planeta.png" alt="Планета Земля" class="planeta animated fadeInDown">
+                    <img src="img/tiranozavr.png" alt="Тиранозавр" class="zavr animated slideInLeft">
                     <img src="img/cklock.png" alt="Часы карманные" class="clock">
                 </div>
                 <div class="social">
@@ -58,22 +74,42 @@
     </header>
     <section id="work">
         <div class="container">
-            <div class="row">
+            <div class="row work-desc">
                 <h2>наша работа</h2>
                 <p>ideo  - digital агентство. Постоянная практика, сильная команда разработчиков и маркетологов, комплексный подход к работе - все это позволяет нам развивать стратегии эффективного продвижения в Интернете.</p>
                 <p>Мы поможем вашему бизнесу стартовать или увеличить доходы и рентабельность вашего бизнеса  с помощью интернет-маркетинга.</p>
             </div>
             <div class="row work-row">
                 <div class="col-lg-6 work-item">
+                    <div class="work-info">
+                        <h3>Barber shop "Oswald"</h3>
+                        <p>Одностраничный сайт для мужского салона красоты</p>
+                        <img src="img/plus.svg" alt="">
+                    </div>
                     <img src="img/barber.jpg" alt="">
                 </div>
                 <div class="col-lg-6 work-item">
+                    <div class="work-info work-info-second">
+                        <h3>Bestoren</h3>
+                        <p>Сайт для продажи домашней выпечки на новогодние праздники</p>
+                        <img src="img/plus.svg" alt="">
+                    </div>
                     <img src="img/bestoren.jpg" alt="">
                 </div>
                 <div class="col-lg-6 work-item">
+                    <div class="work-info">
+                        <h3>Mango Tours</h3>
+                        <p>Одностраничный сайт для компании, организующей авторские туры в Таиланде</p>
+                        <img src="img/plus.svg" alt="">
+                    </div>
                     <img src="img/mango-tours.jpg" alt="">
                 </div>
                 <div class="col-lg-6 work-item">
+                    <div class="work-info work-info-second">
+                        <h3>RockMyPhoto Lab</h3>
+                        <p>Сайт для digital event студии</p>
+                        <img src="img/plus.svg" alt="">
+                    </div>
                     <img src="img/rockmyphoto.jpg" alt="">
                 </div>
             </div>
@@ -92,11 +128,19 @@
             <div class="row">
                 <div class="col-lg-8 info">
                     <h2>давайте создадим что-то важное вместе</h2>
-                    <p>Свяжитесь с нами сегодня, чтобы начать работать над вашими результатами! Мы хотели бы узнать больше о вашем проекте.</p>
+                    <p>Свяжитесь с нами сегодня, <br>чтобы начать работать над вашими результатами! Мы хотели бы узнать больше о вашем проекте.</p>
                     <a href="#" class="hoverable" target="_blank">Начать проект! <img src="img/plus.svg" alt=""></a>
                 </div>
-                <div class="col-lg-4">
-
+                <div class="col-lg-4 images">
+                    <img src="img/chertezhi.png" alt="" class="chertezhi">
+                    <img src="img/fly-mountain.png" alt="" class="mountain animated slideInUp slower">
+                    <img src="img/kit.png" alt="" class="kit">
+                    <img src="img/lego-1.png" alt="" class="lego-1">
+                    <img src="img/lego-2.png" alt="" class="lego-2">
+                    <img src="img/RoboHand.png" alt="" class="rob-hand animated fadeInLeft">
+                    <img src="img/ManHand.png" alt="" class="man-hand animated fadeInRight">
+                    <img src="img/enot-i-veyder.png" alt="" class="enot-veyder">
+                    <img src="img/transportir.png" alt="" class="transportir">
                 </div>
             </div>
         </div>
@@ -136,6 +180,10 @@
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="js/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="js/pointer.js"></script>

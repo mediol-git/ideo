@@ -52,6 +52,7 @@ $shadowDark: rgba(0,0,0,.2);
 $textColor: #1c1c20;
 $blobColor: #0055fe;
 $bdColor: #cacace;
+$menuBg: rgba(0,0,0,.7);
 
 //Mixins
 @mixin secTitle {
@@ -60,6 +61,47 @@ $bdColor: #cacace;
     line-height: 70px;
     margin-bottom: 40px;
     padding-left: 5%;
+}
+@mixin rotation ($count) {
+    -webkit-animation-name: rotation;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: $count;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotation;
+    -moz-animation-duration: 10s;
+    -moz-animation-iteration-count: $count;
+    -moz-animation-timing-function: linear;
+    -o-animation-name: rotation;
+    -o-animation-duration: 10s;
+    -o-animation-iteration-count: $count;
+    -o-animation-timing-function: linear;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: $count;
+    animation-timing-function: linear;
+}
+@mixin swing ($duration) {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    animation-direction: reverse;
+    transform-origin: center center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@mixin floating ($name, $duration) {
+    animation-name: $name;
+    -webkit-animation-name: $name;
+    animation-duration: $duration;   
+    -webkit-animation-duration: $duration;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
 
 //Main styles
@@ -78,9 +120,28 @@ section {
 }
 a {
     color: $textColor;
+    line-height: 1.5;
+    display: inline-block;
+    text-decoration: none!important;
+    cursor: pointer;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -o-transition: .5s ease;
+    &::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: $textColor;
+        transition: width .3s ease-in-out;
+    }
     &:hover {
         color: $textColor;
     }
+}
+a:hover:after,
+a:focus:after {
+    width: 100%;
 }
 
 //Pointer
@@ -179,13 +240,46 @@ a {
         align-items: center;
         a {
             font-size: 22px;
-            padding-bottom: 5px;
-            text-decoration: none;
-            border-bottom: 2px solid $textColor;
         }
         img {
             width: 70px;
             margin-left: 40px;
+        }
+    }
+}
+#menuBlock {
+    display: none;
+    &:checked ~ #menu {
+        top: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
+#menu {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    top: -100%;
+    right: -100%;
+    transition: .5s;
+    border-radius: 50%;
+    background-color: $whiteColor;
+    img {
+        position: absolute;
+        width: 70px;
+        top: 18px;
+        right: 62px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: space-around;
+        a {
+            margin-bottom: 40px;
         }
     }
 }
@@ -220,57 +314,33 @@ header {
         .lupa {
             z-index: 99;
             bottom: -160px;
-            left: 200px;
+            left: 250px;
         }
         .zavr {
             z-index: 98;
             bottom: -170px;
-            left: 75px;
-            // -webkit-animation-duration: 1s;
-            // animation-duration: 1s;
-            // -webkit-animation-fill-mode: both;
-            // animation-fill-mode: both;
-            // -webkit-transform-origin: center center;
-            // -ms-transform-origin: center center;
-            // transform-origin: center center;
-            // -webkit-animation-name: swing;
-            // animation-name: swing;
-            // animation-duration: 3s;
-            // animation-iteration-count: infinite;
-            // animation-timing-function: linear;
+            left: 125px;
         }
         .clock {
             z-index: 98;
             width: 80px;
             bottom: -20px;
-            left: 80px;
+            left: 130px;
         }
         .hand-bat {
             z-index: 98;
-            left: -45px;
+            left: -15px;
             top: 110px;
-            // -webkit-animation-duration: 1s;
-            // animation-duration: 1s;
-            // -webkit-animation-fill-mode: both;
-            // animation-fill-mode: both;
-            // -webkit-transform-origin: center center;
-            // -ms-transform-origin: center center;
-            // animation-direction: reverse;
-            // transform-origin: center center;
-            // -webkit-animation-name: swing;
-            // animation-name: swing;
-            // animation-duration: 2s;
-            // animation-iteration-count: 9999;
-            // animation-timing-function: linear;
+            @include swing(12s);
         }
         .david {
             z-index: 97;
-            left: 100px;
+            left: 150px;
         }
         .dron {
             z-index: 96;
             top: 40px;
-            right: 10px;
+            right: 0;
         }
         .nlo {
             z-index: 96;
@@ -282,32 +352,17 @@ header {
             width: 180px;
             top: -30px;
             right: 80px;
-            -webkit-animation-name: rotation;
-            -webkit-animation-duration: 5s;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-timing-function: linear;
-            -moz-animation-name: rotation;
-            -moz-animation-duration: 5s;
-            -moz-animation-iteration-count: infinite;
-            -moz-animation-timing-function: linear;
-            -o-animation-name: rotation;
-            -o-animation-duration: 5s;
-            -o-animation-iteration-count: infinite;
-            -o-animation-timing-function: linear;
-            animation-name: rotation;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
+            @include rotation(infinite);
         }
         .delorian {
             z-index: 95;
-            right: 90px;
+            right: 120px;
             bottom: -30px;
         }
         .rob-heart {
             z-index: 94;
             top: 190px;
-            left: 70px;
+            left: 120px;
         }
     }
     .social {
@@ -346,23 +401,73 @@ header {
 }
 #work {
     background-color: $whiteColor;
-    h2 {
-        @include secTitle();
-    }
-    p {
-        padding-left: 20%;
+    .work-desc {
+        h2 {
+            @include secTitle();
+        }
+        p {
+            padding-left: 20%;
+        }
     }
     .work-row {
         .work-item {
+            position: relative;
             padding: 0 50px 50px 0;
             margin-top: 50px;
             &:nth-child(2n) {
                 margin-top: 130px;
                 padding: 0 0 0 50px;
             }
+            &:nth-child(2) {
+                .work-info {
+                    padding-top: 50%;
+                }
+            }
+            &:nth-child(3) {
+                .work-info {
+                    padding-top: 50%;
+                }
+            }
             img {
                 max-width: 100%;
             }
+        }
+        .work-info {
+            display: flex;
+            flex-flow: column;
+            position: absolute;
+            top: 0;
+            bottom: 80px;
+            left: 0;
+            right: 50px;
+            padding: 55% 50px 20px;
+            background: rgba(0,0,0,.6);
+            color: $whiteColor;
+            -webkit-transition: .5s ease;
+            -moz-transition: .5s ease;
+            -o-transition: .5s ease;
+            &:hover {
+                transform: scale(0.9);
+                border: 1px solid $whiteColor;
+                transition: .5s;
+            }
+            img {
+                width: 45px;
+            }
+            h3 {
+                font-family: 'Gotham Pro', serif;
+                font-weight: 700;
+                font-size: 45px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        .work-info-second {
+            top: 0;
+            bottom: 0;
+            left: 50px;
+            right: 0;
         }
     }
     a {
@@ -375,6 +480,9 @@ header {
         &:hover {
             background-color: #e3ecff;
             transition: .5s;
+        }
+        &::after {
+            display: none;
         }
         img {
             width: 50px;
@@ -398,6 +506,7 @@ header {
     }
 }
 #getStart {
+    overflow: hidden;
     .info {
         display: flex;
         flex-flow: column;
@@ -406,6 +515,7 @@ header {
         }
         p {
             padding-left: 20%;
+            padding-right: 20%;
         }
         a {
             width: 267px;
@@ -422,10 +532,87 @@ header {
                 color: $textColor;
                 transition: .5s;
             }
+            &::after {
+                display: none;
+            }
             img {
                 width: 50px;
                 margin-left: 25px;
             }
+        }
+    }
+    .images {
+        position: relative;
+        img {
+            position: absolute;
+            max-width: 100%;
+        }
+        .mountain {
+            z-index: 96;
+            top: 100px;
+            left: 10px;
+            animation-name: floatingUpDown;
+            -webkit-animation-name: floatingUpDown;
+            animation-duration: 4s;   
+            -webkit-animation-duration: 4s;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+        .rob-hand {
+            z-index: 99;
+            left: -180px;
+            top: 90px;
+            animation-name: floatingLeft;
+            -webkit-animation-name: floatingLeft;
+            animation-duration: 3s;   
+            -webkit-animation-duration: 3s;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+        .man-hand {
+            z-index: 99;
+            bottom: 150px;
+            right: -80px;
+            @include floating(floatingRight, 3s);
+        }
+        .transportir {
+            z-index: 98;
+            bottom: 130px;
+            @include swing(12s);
+        }
+        .lego-2 {
+            z-index: 98;
+            bottom: 120px;
+            left: 0;
+            @include rotation(3);
+        }
+        .enot-veyder {
+            z-index: 97;
+            bottom: 0;
+            left: 70px;
+            @include swing(15s);
+        }
+        .lego-1 {
+            z-index: 98;
+            top: 130px;
+            right: 50px;
+            @include rotation(3);
+        }
+        .kit {
+            z-index: 98;
+            right: -100%;
+            top: 40px;
+            animation-name: slideRight;
+            -webkit-animation-name: slideRight; 
+            animation-duration: 15s; 
+            -webkit-animation-duration: 15s;
+            animation-timing-function: linear; 
+            -webkit-animation-timing-function: linear;
+        }
+        .chertezhi {
+            z-index: 95;
+            right: 0;
+            top: 0;
         }
     }
 }
@@ -468,7 +655,10 @@ footer {
             font-weight: 700;
         }
         a {
-            text-decoration: underline;
+            text-decoration: underline!important;
+            &::after {
+                display: none;
+            }
         }
     }
 }
