@@ -37,7 +37,7 @@
                     <a href="#" class="hoverable"><li>О компании</li></a>
                     <a href="#" class="hoverable"><li>Наши проекты</li></a>
                     <a href="#" class="hoverable"><li>Карьера</li></a>
-                    <a href="#" class="hoverable"><li>Контакты</li></a>
+                    <a href="contact.html" class="hoverable" target="_blank"><li>Контакты</li></a>
                 </ul>
             </div>
         </div>
@@ -54,23 +54,23 @@
                     <img src="img/David.png" alt="Давид" class="david">
                     <img src="img/delorian.png" alt="Машина времени" class="delorian animated slideInLeft delay-2s">
                     <img src="img/dron.png" alt="Дрон" class="dron animated fadeInRight delay-3s">
-                    <img src="img/RoboHand-i-babochka.png" alt="Рука робота и бабочка" class="hand-bat animated">
+                    <img src="img/RoboHand-i-babochka.png" alt="Рука робота и бабочка" class="hand-bat">
                     <img src="img/RoboHeart.png" alt="Серце робота" class="rob-heart animated pulse infinite">
                     <img src="img/lupa.png" alt="Лупа" class="lupa animated fadeIn delay-1s">
                     <img src="img/nlo.png" alt="НЛО" class="nlo animated fadeInUp delay-4s">
-                    <img src="img/planeta.png" alt="Планета Земля" class="planeta animated fadeInDown">
+                    <img src="img/planeta.png" alt="Планета Земля" class="planeta">
                     <img src="img/tiranozavr.png" alt="Тиранозавр" class="zavr animated slideInLeft">
                     <img src="img/cklock.png" alt="Часы карманные" class="clock">
                 </div>
-                <div class="social">
-                    <a href="#" class="hoverable"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="hoverable"><i class="fab fa-behance"></i></a>
-                    <a href="#" class="hoverable"><i class="fab fa-instagram"></i></a>
-                </div>
             </div>
         </div>
-        <p class="scroll">Листайте вниз</p>
-        <img class="point" src="img/point.png" alt="">
+        <div class="social">
+            <a href="#" class="hoverable"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hoverable"><i class="fab fa-behance"></i></a>
+            <a href="#" class="hoverable"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="#work" class="hoverable"><p class="scroll">Листайте вниз</p></a>
+        <a href="#work" class="hoverable"><img class="point" src="img/point.png" alt=""></a>
     </header>
     <section id="work">
         <div class="container">
@@ -79,7 +79,7 @@
                 <p>ideo  - digital агентство. Постоянная практика, сильная команда разработчиков и маркетологов, комплексный подход к работе - все это позволяет нам развивать стратегии эффективного продвижения в Интернете.</p>
                 <p>Мы поможем вашему бизнесу стартовать или увеличить доходы и рентабельность вашего бизнеса  с помощью интернет-маркетинга.</p>
             </div>
-            <div class="row work-row">
+            <div id="projects" class="row work-row">
                 <div class="col-lg-6 work-item">
                     <div class="work-info">
                         <h3>Barber shop "Oswald"</h3>
@@ -133,12 +133,12 @@
                 </div>
                 <div class="col-lg-4 images">
                     <img src="img/chertezhi.png" alt="" class="chertezhi">
-                    <img src="img/fly-mountain.png" alt="" class="mountain animated slideInUp slower">
+                    <img src="img/fly-mountain.png" alt="" class="mountain">
                     <img src="img/kit.png" alt="" class="kit">
                     <img src="img/lego-1.png" alt="" class="lego-1">
                     <img src="img/lego-2.png" alt="" class="lego-2">
-                    <img src="img/RoboHand.png" alt="" class="rob-hand animated fadeInLeft">
-                    <img src="img/ManHand.png" alt="" class="man-hand animated fadeInRight">
+                    <img src="img/RoboHand.png" alt="" class="rob-hand">
+                    <img src="img/ManHand.png" alt="" class="man-hand">
                     <img src="img/enot-i-veyder.png" alt="" class="enot-veyder">
                     <img src="img/transportir.png" alt="" class="transportir">
                 </div>
@@ -170,16 +170,13 @@
             </div>
         </div>
     </footer>
-
     <div class="js-pointer pointer">
         <div class="pointer__circle"></div>
    </div>
-
-
-
-
+   
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/slow_scroll.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();

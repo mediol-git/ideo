@@ -41,7 +41,7 @@
 }
 
 @font-face {
-  src: url(../fonts/UniversLTCYR-85XBlack.ttf);
+  src: url(../fonts/UniversLTCYR-65Bold.ttf);
   font-family: 'Univers LT';
   font-style: normal;
   font-weight: 700;
@@ -61,6 +61,13 @@ body {
 
 section {
   padding: 100px 0 0;
+}
+
+h1 {
+  font-family: 'Gotham Pro', serif;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 77px;
 }
 
 a {
@@ -131,7 +138,8 @@ a:focus:after {
 }
 
 .navigation {
-  position: absolute;
+  position: fixed;
+  z-index: 999;
   padding: 35px 0;
   width: 100%;
 }
@@ -159,8 +167,8 @@ a:focus:after {
 }
 
 .navigation .logo-switch .logo img {
-  width: 150px;
-  padding-right: 30px;
+  width: 120px;
+  margin-right: 30px;
 }
 
 .navigation .logo-switch .switch {
@@ -296,13 +304,6 @@ header .row {
   position: relative;
 }
 
-header .hero-text h1 {
-  font-family: 'Gotham Pro', serif;
-  font-size: 80px;
-  font-weight: 900;
-  line-height: 77px;
-}
-
 header .hero-text p {
   padding-left: 100px;
   margin-top: 50px;
@@ -410,30 +411,6 @@ header .hero-img .rob-heart {
   left: 120px;
 }
 
-header .social {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  right: -0;
-  top: 150px;
-}
-
-header .social a {
-  margin-bottom: 20px;
-}
-
-header .social i {
-  font-size: 18px;
-}
-
 header .scroll {
   font-size: 14px;
   font-weight: 200;
@@ -454,6 +431,30 @@ header .point {
   width: 12px;
   bottom: 40px;
   left: 49%;
+}
+
+.social {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  right: 4.5%;
+  top: 40%;
+}
+
+.social a {
+  margin-bottom: 20px;
+}
+
+.social i {
+  font-size: 18px;
 }
 
 #work {
@@ -615,20 +616,17 @@ header .point {
 }
 
 #getStart .info a {
-  width: 267px;
+  width: 275px;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 18%;
+  padding-left: 25px;
   font-size: 22px;
-  color: #0055fe;
-  padding-left: 20px;
   text-decoration: none;
   border-radius: 50px;
 }
 
 #getStart .info a:hover {
   background-color: #e3ecff;
-  color: #1c1c20;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -792,6 +790,212 @@ header .point {
   top: 0;
 }
 
+#contacts {
+  padding-top: 150px;
+}
+
+#contacts .container {
+  max-width: 1024px;
+}
+
+#contacts .row {
+  padding-bottom: 50px;
+}
+
+#contacts .row h1 {
+  font-size: 120px;
+}
+
+#contacts .row .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+form h3 {
+  width: 100%;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+form .personal-info input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #a9a9ab;
+  background: transparent;
+  padding: 15px 0;
+  margin-bottom: 50px;
+}
+
+form .personal-info input::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+form .personal-info input:-ms-input-placeholder {
+  font-size: 20px;
+}
+
+form .personal-info input::-ms-input-placeholder {
+  font-size: 20px;
+}
+
+form .personal-info input::placeholder {
+  font-size: 20px;
+}
+
+form .brif .form-check, form .range .form-check {
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+form .brif .form-check input[type=radio],
+form .brif .form-check input[type=checkbox], form .range .form-check input[type=radio],
+form .range .form-check input[type=checkbox] {
+  display: none;
+}
+
+form .brif .form-check label, form .range .form-check label {
+  display: inline-block;
+  position: relative;
+  padding-left: 60px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+form .brif .form-check label::before, form .range .form-check label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -5px;
+  left: 0;
+  background-color: #0055fe;
+  opacity: .3;
+  border-radius: 50px;
+}
+
+form .brif .form-check input[type=radio]:checked + label:before,
+form .brif .form-check input[type=radio]:checked ~ label, form .range .form-check input[type=radio]:checked + label:before,
+form .range .form-check input[type=radio]:checked ~ label {
+  opacity: 1;
+  color: #0055fe;
+}
+
+form .brif .form-check input[type=checkbox]:checked + label:before,
+form .brif .form-check input[type=checkbox]:checked ~ label, form .range .form-check input[type=checkbox]:checked + label:before,
+form .range .form-check input[type=checkbox]:checked ~ label {
+  opacity: 1;
+  color: #0055fe;
+}
+
+form .range {
+  margin-bottom: 50px;
+}
+
+form .range input[type=range] {
+  -webkit-appearance: none;
+  background-color: transparent;
+  margin-bottom: 35px;
+}
+
+form .range input[type=range]::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  height: 5px;
+  background-color: #cacace;
+}
+
+form .range input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 8px solid #0055fe;
+  -webkit-box-shadow: 0 0 15px #979797;
+          box-shadow: 0 0 15px #979797;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: -15px;
+}
+
+form .range input[type=range]::-moz-range-track {
+  border-radius: 10px;
+  height: 5px;
+  background-color: #cacace;
+}
+
+form .range input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 8px solid #0055fe;
+  box-shadow: 0 0 20px #979797;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: -15px;
+}
+
+form .range .form-check {
+  float: left;
+}
+
+form .range p {
+  float: right;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+form .range .clear {
+  clear: both;
+}
+
+form .range #rangeList option {
+  display: inline-block;
+  color: #0055fe;
+}
+
+form textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 20px;
+  padding: 40px 50px;
+  background-color: #e8edfa;
+}
+
+form .btn-submit {
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 25px;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+form .btn-submit:hover {
+  background-color: #e3ecff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+form .btn-submit::after {
+  display: none;
+}
+
+form .btn-submit img {
+  width: 50px;
+  margin-left: 25px;
+}
+
 footer {
   border-top: 2px solid #cacace;
   padding: 50px 0 25px;
@@ -812,7 +1016,7 @@ footer .foot-logo {
 }
 
 footer .foot-logo img {
-  width: 150px;
+  width: 120px;
 }
 
 footer .foot-menu {
