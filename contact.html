@@ -130,7 +130,14 @@
                     </div>
                     <div class="form-group range">
                         <h3>Ваш бюджет*</h3>
-                        <input type="range" name="credit" class="form-control-range" id="range"step="10000" min="0" max="100000" value="10000" list="rangeList" onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+                        <div class="budjet-value">
+                            <p>0 &#8381;</p>
+                            <p>&lt;10 000 &#8381;</p>
+                            <p>&lt;30 000 &#8381;</p>
+                            <p>&lt;60 000 &#8381;</p>
+                            <p>&gt;100 000 &#8381;</p>
+                        </div>
+                        <input type="range" name="credit" class="form-control-range" id="range"step="1" min="0" max="4" value="2" list="rangeList" onchange="document.getElementById('rangeValue').innerHTML = this.value;">
                         <datalist id="rangeList">
                             <option value="0" label="0">
                             <option value="10000" label="10000">
@@ -144,12 +151,19 @@
                                 Я не знаю
                             </label>
                         </div>
-                        <p><span id="rangeValue">10000</span> ₽</p>
+                        <!-- <p><span id="rangeValue">10000</span> ₽</p> -->
                         <div class="clear"></div>
                     </div>
                     <div class="form-group range">
                         <h3>Сроки сдачи*</h3>
-                        <input type="range" name="credit" class="form-control-range" id="range"step="10000" min="0" max="100000" value="10000" list="rangeList" onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+                        <div class="time-value">
+                            <p>1 неделя &#128561;</p>
+                            <p>1 месяц</p>
+                            <p>3 месяца</p>
+                            <p>6 месяцев</p>
+                            <p>1 год</p>
+                        </div>
+                        <input type="range" name="credit" class="form-control-range" id="range"step="1" min="0" max="4" value="1" list="rangeList" onchange="document.getElementById('rangeValue').innerHTML = this.value;">
                         <datalist id="rangeList">
                             <option value="0" label="0">
                             <option value="10000" label="10000">Some text</option>
@@ -158,8 +172,8 @@
                             <option value="100000" label="100000">
                         </datalist>
                         <div class="form-check hoverable">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                            <label class="form-check-label" for="defaultCheck2">
                                 Я не знаю
                             </label>
                         </div>
