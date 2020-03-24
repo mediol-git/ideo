@@ -282,7 +282,7 @@ a:hover {
   font-size: 120px;
   font-weight: 900;
   line-height: 130px;
-  margin-bottom: 40px;
+  margin-bottom: 95px;
   padding-left: 5%;
   line-height: 1.5;
   display: inline-block;
@@ -500,12 +500,13 @@ header .point {
   font-size: 120px;
   font-weight: 900;
   line-height: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 95px;
   padding-left: 5%;
 }
 
 #work .work-desc p {
   padding-left: 20%;
+  width: 80%;
 }
 
 #work .work-row {
@@ -683,7 +684,7 @@ header .point {
   font-size: 100px;
   font-weight: 900;
   line-height: 90px;
-  margin-bottom: 40px;
+  margin-bottom: 95px;
   padding-left: 5%;
 }
 
