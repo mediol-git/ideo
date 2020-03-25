@@ -39,7 +39,6 @@
 }
 
 //Variables
-
 $darkBg: #101012;
 $lightBg: #f6f6fa;
 $lightText: #fff;
@@ -48,6 +47,7 @@ $darkText: #1c1c20;
 $blobColor: #0055fe;
 $lightBlue: #e3ecff;
 $bdColor: #cacace;
+$menuBg: rgba(0,0,0,.7);
 
 //Mixins
 @mixin secTitle ($fz, $lh) {
@@ -82,10 +82,10 @@ $bdColor: #cacace;
         z-index: -1;
         top: 0;
         left: 0;
-        right: 10px;
+        right: 25px;
         bottom: 0;
         background: $lightBlue;
-        border-radius: 50px;
+        border-radius: 50px 0 0 50px;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: 100% 50%;
@@ -99,6 +99,9 @@ $bdColor: #cacace;
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
+    &:hover {
+        color: $darkText;
+    }
     &::after {
         display: none;
     }
@@ -111,7 +114,6 @@ $bdColor: #cacace;
         font-size: 16px;
     }
 }
-
 @mixin linkUnderline {
     line-height: 1.5;
     display: inline-block;
@@ -125,7 +127,7 @@ $bdColor: #cacace;
         content: "";
         height: 2px;
         width: 0%;
-        background-color: $darkText;
+        background-color: $lightText;
         transition: width .3s ease-in-out;
     }
     &:hover:after,
@@ -133,7 +135,6 @@ $bdColor: #cacace;
         width: 100%;
     }
 }
-
 @mixin rotation ($count) {
     -webkit-animation-name: rotation;
     -webkit-animation-duration: 10s;
@@ -194,7 +195,7 @@ $bdColor: #cacace;
             height: 40px;
             top: -5px;
             left: 0;
-            background-color: #0055fe;
+            background-color: $blobColor;
             opacity: .3;
             border-radius: 50px;
         }
@@ -202,12 +203,12 @@ $bdColor: #cacace;
     input[type=radio]:checked + label:before,
     input[type=radio]:checked ~ label {
         opacity: 1;
-        color: #0055fe;
+        color: $blobColor;
     }
     input[type=checkbox]:checked + label:before,
     input[type=checkbox]:checked ~ label {
         opacity: 1;
-        color: #0055fe;
+        color: $blobColor;
     }
 }
 @mixin rangeValue ($padL, $marL) {
@@ -246,8 +247,8 @@ $bdColor: #cacace;
 //Main styles
 body {
     font-family: 'Univers LT', serif;
-    background-color: $lightBg;
-    color: $darkText;
+    background-color: $darkBg;
+    color: $lightText;
     font-weight: 400;
     font-size: 30px;
     @media (max-width: 768px) {
@@ -274,9 +275,9 @@ h1 {
     }
 }
 a {
-    color: $darkText;
+    color: $lightText;
     &:hover {
-        color: $darkText;
+        color: $lightText;
     }
 }
 
@@ -299,8 +300,7 @@ a {
         margin: 0 auto;
         width: 20px;
         height: 20px;
-        // background: $blobColor;
-        border: 1px solid $darkBg;
+        border: 1px solid $lightText;
         border-radius: 50%;
         transition: all .5s cubic-bezier(.37, .01, 0, .98)
     }
@@ -311,7 +311,7 @@ a {
 .pointer.hide {
     .pointer__circle {
         transition: all .3s;
-        background: $blobColor;
+        background: $lightText;
         border: none;
         opacity: .2;
         width: 60px;
@@ -433,7 +433,7 @@ a {
     right: -100%;
     transition: .5s;
     border-radius: 50%;
-    background-color: $lightText;
+    background-color: $darkBg;
     img {
         position: absolute;
         width: 70px;
@@ -661,7 +661,6 @@ header {
 
 /*--- work ---*/
 #work {
-    background-color: $lightText;
     .work-desc {
         h2 {
             @include secTitle(120px, 100px);
@@ -784,8 +783,8 @@ header {
             line-height: 160px;
             font-family: 'Gotham Pro', serif;
             font-weight: 900;
-            color: $lightBg;
-            -webkit-text-stroke: 2px $darkText;
+            color: $darkBg;
+            -webkit-text-stroke: 2px $lightText;
             @media (max-width: 425px) {
                 font-size: 72px;
                 line-height: 80px;

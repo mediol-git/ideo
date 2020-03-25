@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="img/fav.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link id="style" rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/blobs.css">
     <title>Ideo - интернет-маркетинг и разработка сайтов</title>
@@ -19,7 +19,9 @@
                     <img src="img/logo_black.png" alt="">
                 </div>
                 <div class="switch">
-                    <input type="checkbox" name="" id="" class="hoverable">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" class="hoverable">
+                    </label>
                 </div>
             </div>
             <div class="link-menu">
@@ -189,6 +191,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slow_scroll.js"></script>
+    <script src="js/switchTheme.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
         new WOW(
