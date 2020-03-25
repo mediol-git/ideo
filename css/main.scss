@@ -57,6 +57,11 @@ $menuBg: rgba(0,0,0,.7);
     line-height: $lh;
     margin-bottom: 95px;
     padding-left: 5%;
+    @media (max-width: 768px) {
+        font-size: 40px;
+        line-height: 37px;
+        margin-bottom: 30px;
+    }
 }
 @mixin buttonStyle {
     margin-top: 50px;
@@ -101,6 +106,9 @@ $menuBg: rgba(0,0,0,.7);
         width: 50px;
         margin-left: 25px;
         position: relative;
+    }
+    @media (max-width: 425px) {
+        font-size: 16px;
     }
 }
 
@@ -214,6 +222,26 @@ $menuBg: rgba(0,0,0,.7);
         }
     }
 }
+@mixin footMenu {
+    display: flex;
+    align-items: flex-end;
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        list-style: none;
+        font-family: 'Gotham Pro', serif;
+        font-weight: 700;
+        font-size: 20px;
+        @media (max-width: 768px) {
+            padding-inline-start: 0;
+            font-size: 12px;
+        }
+    }
+    a {
+        @include linkUnderline();
+    }
+}
 
 //Main styles
 body {
@@ -222,9 +250,15 @@ body {
     color: $textColor;
     font-weight: 400;
     font-size: 30px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
 }
 .container {
     max-width: 1590px;
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
 }
 section {
     padding: 100px 0 0;
@@ -234,6 +268,10 @@ h1 {
     font-size: 120px;
     font-weight: 900;
     line-height: 115px;
+    @media (max-width: 768px) {
+        font-size: 43px;
+        line-height: 48px;
+    }
 }
 a {
     color: $textColor;
@@ -284,19 +322,37 @@ a {
     z-index: 999;
     padding: 35px 0;
     width: 100%;
+    @media (max-width: 768px) {
+        width: 100%;
+        position: absolute;
+    }
     .container {
         max-width: 1780px;    
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 768px) {
+            max-width: 100%;
+            align-items: flex-start;
+        }
     }
     .logo-switch {
         display: flex;
         align-items: center;
+        @media (max-width: 768px) {
+            flex-flow: column;
+            align-items: flex-start;
+        }
         .logo {
+            @media (max-width: 768px) {
+                margin-bottom: 20px;
+            }
             img {
                 width: 65px;
                 margin-right: 30px;
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                }
             }
         }
         .switch {
@@ -339,11 +395,19 @@ a {
         align-items: center;
         a {
             font-size: 22px;
+            font-weight: 700;
             @include linkUnderline();
+            @media (max-width: 768px) {
+                font-size: 15px;
+            }
         }
         img {
             width: 70px;
             margin-left: 40px;
+            @media (max-width: 768px) {
+                width: 50px;
+                margin-left: 30px;
+            }
         }
     }
 }
@@ -400,76 +464,142 @@ header {
     align-items: center;
     .row {
         position: relative;
+        @media (max-width: 768px) {
+            display: flex;
+            flex-flow: column;
+            flex-direction: column-reverse;
+        }
     }
     .hero-text {
         width: 850px;
         padding: 0 15px;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
         p {
             padding-left: 100px;
             margin-top: 50px;
+            @media (max-width: 768px) {
+                font-size: 20px;
+                padding-left: 0;
+            }
         }
     }
     .hero-img {
         width: 650px;
         padding: 0 15px;
         position: relative;
+        @media (max-width: 768px) {
+            width: 100%;
+            height: 50vh;
+        }
         img {
             position: absolute;
             max-width: 100%;
         }
         .lupa {
             z-index: 99;
-            bottom: -20px;
-            left: 250px;
+            bottom: -3%;
+            left: 40%;
+            @media (max-width: 375px) {
+                width: 65px;
+                left: 170px;
+                bottom: 5px;
+            }
         }
         .zavr {
             z-index: 98;
-            bottom: -30px;
-            left: 125px;
+            bottom: -5%;
+            left: 20%;
+            @media (max-width: 375px) {
+                width: 70px;
+                bottom: 0;
+                left: 125px;
+            }
         }
         .clock {
             z-index: 98;
             width: 80px;
-            bottom: 90px;
-            left: 140px;
+            bottom: 15%;
+            left: 22%;
+            @media (max-width: 375px) {
+                width: 32px;
+                left: 120px;
+                bottom: 50px;
+            }
         }
         .hand-bat {
             z-index: 98;
-            left: -15px;
-            top: 140px;
+            left: -3%;
+            top: 22%;
             @include swing(12s);
+            @media (max-width: 375px) {
+                height: 145px;
+                left: 70px;
+                top: 150px;
+            }
         }
         .david {
             z-index: 97;
-            left: 150px;
-            top: 30px;
+            left: 23%;
+            top: 6%;
+            @media (max-width: 375px) {
+                height: 210px;
+                left: 125px;
+                top: 110px;
+            }
         }
         .dron {
             z-index: 96;
-            top: 70px;
+            top: 16%;
             right: 0;
+            @media (max-width: 375px) {
+                width: 40px;
+                right: 50px;
+                top: 120px;
+            }
         }
         .nlo {
             z-index: 96;
             top: -40px;
-            right: 70px;
+            right: 12%;
+            @media (max-width: 375px) {
+                width: 20px;
+                right: 75px;
+                top: 90px;
+            }
         }
         .planeta {
             z-index: 95;
             width: 180px;
             top: 0;
-            right: 80px;
+            right: 13%;
             @include rotation(infinite);
+            @media (max-width: 375px) {
+                width: 70px;
+                right: 85px;
+                top: 100px;
+            }
         }
         .delorian {
             z-index: 95;
             right: 90px;
             bottom: 90px;
+            @media (max-width: 375px) {
+                width: 65px;
+                bottom: 55px;
+                right: 100px;
+            }
         }
         .rob-heart {
             z-index: 94;
-            top: 220px;
-            left: 140px;
+            top: 40%;
+            left: 22%;
+            @media (max-width: 375px) {
+                height: 100px;
+                left: 125px;
+                top: 195px;
+            }
         }
     }
     .scroll {
@@ -482,6 +612,13 @@ header {
         z-index: 999;
         bottom: 100px;
         left: 45.5%;
+        @media (max-width: 768px) {
+            left: 75%;
+            // width: 150px;
+            font-size: 11px;
+            line-height: 17px;
+            margin-bottom: 0;
+        }
     }
     .point {
         position: absolute;
@@ -489,10 +626,14 @@ header {
         width: 12px;
         bottom: 40px;
         left: 49%;
+        @media (max-width: 768px) {
+            left: 90%;
+        }
     }
 }
 .social {
     position: fixed;
+    z-index: 999;
     display: flex;
     align-items: center;
     flex-flow: column;
@@ -504,7 +645,12 @@ header {
     i {
         font-size: 18px;
     }
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
+
+/*--- work ---*/
 #work {
     background-color: $whiteColor;
     .work-desc {
@@ -514,26 +660,47 @@ header {
         p {
             padding-left: 20%;
             width: 80%;
+            @media (max-width: 768px) {
+                padding: 0 15px;
+                width: 100%;
+            }
         }
     }
     .work-row {
         display: flex;
         justify-content: center;
         margin-top: 80px;
+        @media (max-width: 768px) {
+            padding: 0 15px;
+        }
         .work-item {
             width: 680px;
             height: 600px;
             overflow: hidden;
             position: relative;
+            @media (max-width: 425px) { 
+                margin-right: 0;
+                width: 100%;    
+                height: 275px;
+            }
             &:first-child, &:nth-child(3) {
                 margin: 0;
                 margin-right: 80px;
                 margin-bottom: 160px;
+                @media (max-width: 768px) {    
+                    margin-right: 0;
+                    margin-bottom: 40px;
+                }
             }
             &:nth-child(2), &:last-child {
                 margin: 0;
                 margin-left: 80px;
                 margin-top: 80px;
+                @media (max-width: 768px) {    
+                    margin-left: 0;
+                    margin-top: 0;
+                    margin-bottom: 40px;
+                }
             }
             img {
                 transition: 500ms;
@@ -555,11 +722,16 @@ header {
             padding: 59% 50px 40px;
             color: $whiteColor;
             transition: .5s;
-            &:hover {
-                padding-top: 50%;
+            @media (max-width: 425px) {    
+                padding: 35% 30px;
             }
-            &:hover > img {
-                opacity: 1;
+            @media (min-width: 1024px) {
+                &:hover {
+                    padding-top: 50%;
+                }
+                &:hover > img {
+                    opacity: 1;
+                }
             }
             img {
                 transition: 300ms;
@@ -570,9 +742,15 @@ header {
                 font-family: 'Gotham Pro', serif;
                 font-weight: 700;
                 font-size: 45px;
+                @media (max-width: 425px) {
+                    font-size: 30px;
+                }
             }
             p {
                 font-size: 18px;
+                @media (max-width: 425px) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -582,9 +760,16 @@ header {
 }
 #idea {
     overflow: hidden;
+    @media (max-width: 768px) {
+        padding-top: 40px;
+    }
     .parallax-text {
         width: 165%;
         height: 320px;
+        @media (max-width: 425px) {
+            width: 190%;
+            height: 80px;
+        }
         .runline {
             font-size: 320px;
             line-height: 160px;
@@ -592,20 +777,41 @@ header {
             font-weight: 900;
             color: $lightBg;
             -webkit-text-stroke: 2px $textColor;
+            @media (max-width: 425px) {
+                font-size: 72px;
+                line-height: 80px;
+            }
         }
     }
 }
 #getStart {
     overflow: hidden;
+    @media (max-width: 768px) {
+        padding-top: 40px;
+    }
+    .row {
+        @media (max-width: 768px) {
+            display: flex;
+            flex-flow: column;
+            flex-direction: column-reverse;
+        }
+    }
     .info {
         display: flex;
         flex-flow: column;
         h2 {
             @include secTitle(100px, 90px);
+            @media (max-width: 768px) {
+                padding-left: 0;
+            }
         }
         p {
             padding-left: 20%;
             padding-right: 20%;
+            @media (max-width: 768px) {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
         .button {
             width: 275px;
@@ -616,6 +822,10 @@ header {
     }
     .images {
         position: relative;
+        @media (max-width: 768px) {
+            height: 250px;
+            margin-bottom: 25px;
+        }
         img {
             position: absolute;
             max-width: 100%;
@@ -623,53 +833,99 @@ header {
         .mountain {
             z-index: 96;
             top: 100px;
-            left: 10px;
+            left: 50px;
             animation-name: floatingUpDown;
             -webkit-animation-name: floatingUpDown;
             animation-duration: 4s;   
             -webkit-animation-duration: 4s;
             animation-iteration-count: infinite;
             -webkit-animation-iteration-count: infinite;
+            @media (max-width: 425px) {
+                width: 180px;
+                left: 100px;
+                top: 40px;
+            }
+        }
+        .piramida {
+            z-index: 97;
+            top: 250px;
+            left: 200px;
+            @media (max-width: 425px) {
+                width: 65px;
+                left: 160px;
+                top: 90px;
+            }
         }
         .rob-hand {
             z-index: 99;
-            left: -180px;
-            top: 90px;
+            left: -110px;
+            top: 100px;
             animation-name: floatingLeft;
             -webkit-animation-name: floatingLeft;
             animation-duration: 3s;   
             -webkit-animation-duration: 3s;
             animation-iteration-count: infinite;
             -webkit-animation-iteration-count: infinite;
+            @media (max-width: 425px) {
+                width: 130px;
+                left: 50px;
+                top: 40px;
+            }
         }
         .man-hand {
             z-index: 99;
-            bottom: 150px;
-            right: -80px;
+            bottom: 250px;
+            right: -90px;
             @include floating(floatingRight, 3s);
+            @media (max-width: 425px) {
+                width: 115px;
+                bottom: 80px;
+                right: 65px;
+            }
         }
         .transportir {
             z-index: 98;
-            bottom: 130px;
+            bottom: 210px;
+            left: 80px;
             @include swing(12s);
+            @media (max-width: 425px) {
+                width: 50px;
+                bottom: 70px;
+                left: 110px;
+            }
         }
         .lego-2 {
             z-index: 98;
-            bottom: 120px;
-            left: 0;
+            bottom: 170px;
+            left: 30px;
             @include rotation(3);
+            @media (max-width: 425px) {
+                width: 30px;
+                left: 90px;
+                bottom: 60px;
+            }
         }
         .enot-veyder {
             z-index: 97;
-            bottom: 0;
-            left: 70px;
+            bottom: 60px;
+            left: 130px;
             @include swing(15s);
+            @media (max-width: 425px) {
+                width: 85px;
+                bottom: 10px;
+                left: 140px;
+            }
         }
         .lego-1 {
             z-index: 98;
             top: 130px;
             right: 50px;
             @include rotation(3);
+            @media (max-width: 425px) {
+                width: 20px;
+                top: 70px;
+                right: 90px;
+            }
         }
         .kit {
             z-index: 98;
@@ -681,11 +937,21 @@ header {
             -webkit-animation-duration: 15s;
             animation-timing-function: linear; 
             -webkit-animation-timing-function: linear;
+            @media (max-width: 425px) {
+                width: 50px;
+                right: -50px;
+                top: 30px;
+            }
         }
         .chertezhi {
             z-index: 95;
             right: 0;
             top: 0;
+            @media (max-width: 425px) {
+                height: 90px;
+                right: 70px;
+                top: 20px;
+            }
         }
     }
 }
@@ -818,32 +1084,47 @@ form {
 footer {
     border-top: 2px solid $bdColor;
     padding: 50px 0 25px;
+    @media (max-width: 768px) {
+        padding: 35px 0 15px;
+    }
     .container {
         max-width: 1780px;
+        .row {
+            @media (max-width: 768px) {
+                flex-direction: column-reverse;
+            }
+        }
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
         .copyright {
             font-size: 16px;
             font-family: 'Gotham Pro', serif;
             font-weight: 400;
+            opacity: .5;
+            @media (max-width: 768px) {
+                font-size: 12px;
+                padding: 0 15px;
+            }
         }
     }
     .foot-logo {
         padding: 0;
+        @media (max-width: 768px) {
+            padding: 0 15px;
+        }
         img {
             width: 135px;
+            @media (max-width: 768px) {
+                width: 90px;
+                margin-bottom: 15px;
+            }
         }
     }
     .foot-menu {
-        display: flex;
-        align-items: flex-end;
-        ul {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            list-style: none;
-            font-size: 22px;
-        }
-        a {
-            @include linkUnderline();
+        @include footMenu();
+        @media (max-width: 768px) {
+            display: none;
         }
     }
     .foot-contacts {
@@ -851,15 +1132,31 @@ footer {
         flex-flow: column;
         text-align: right;
         font-size: 22px;
+        @media (max-width: 768px) {
+            text-align: left;
+            font-size: 14px;
+        }
         h3 {
             font-family: 'Gotham Pro', serif;
             font-weight: 700;
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
         }
         a {
             text-decoration: underline!important;
             &::after {
                 display: none;
             }
+        }
+    }
+    .mobile-foot-menu {
+        display: none;
+        @media (max-width: 768px) {
+            display: block;
+            width: 100%;
+            padding: 0 15px;
+            @include footMenu();
         }
     }
 }
