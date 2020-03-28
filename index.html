@@ -12,17 +12,15 @@
     <link rel="stylesheet" href="css/blob.css">
     <title>Ideo - интернет-маркетинг и разработка сайтов</title>
 </head>
-<body>
+<body class="light">
     <nav class="navigation">
         <div class="container">
             <div class="logo-switch">
                 <div class="logo">
-                    <img src="img/logo_black.png" alt="">
+                    <img id="logo" src="img/logo_black.png" alt="">
                 </div>
                 <div class="switch">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" class="hoverable">
-                    </label>
+                    <input type="checkbox" id="checkbox" class="checkbox hoverable">
                 </div>
             </div>
             <div class="link-menu">
@@ -175,7 +173,7 @@
                 </a>
             </div>
             <div class="row justify-content-center wow fadeInUp" data-wow-offset="200">
-                <a href="portfolio.html" class="button hoverable" target="_blank">Смотреть еще работы <img src="img/add.png" alt=""></a>
+                <a href="portfolio.html" class="button hoverable" target="_blank">Смотреть еще работы <img src="img/plus-tr.png" alt=""></a>
             </div>
         </div>
     </section>
@@ -251,7 +249,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 foot-logo">
-                    <img src="img/logo_black.png" alt="">
+                    <img id="logo" src="img/logo_black.png" alt="">
                 </div>
                 <div class="col-lg-4 foot-menu">
                     <ul>
@@ -285,10 +283,17 @@
     </div>
    
     <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- <script>
+        $(document).ready(function(){
+            $(".checkbox").click(function(){
+                $(".light").toggleClass("dark"); return false;
+            });
+        });
+    </script> -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slow_scroll.js"></script>
-    <script src="js/switchTheme.js"></script>
-    <script src="js/parallax.js"></script>
+    <script src="js/switch.js"></script>
+    <!-- <script src="js/parallax.js"></script> -->
     <script src="js/wow.min.js"></script>
     <script>
         wow = new WOW({

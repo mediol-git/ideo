@@ -82,10 +82,10 @@ $bdColor: #cacace;
         z-index: -1;
         top: 0;
         left: 0;
-        right: 10px;
+        right: 25px;
         bottom: 0;
         background: $lightBlue;
-        border-radius: 50px;
+        border-radius: 50px 0 0 50px;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: 100% 50%;
@@ -244,7 +244,8 @@ $bdColor: #cacace;
 }
 
 //Main styles
-body {
+.light {
+    transition: .5s;
     font-family: 'Univers LT', serif;
     background-color: $lightBg;
     color: $darkText;
@@ -252,6 +253,31 @@ body {
     font-size: 30px;
     @media (max-width: 768px) {
         font-size: 16px;
+    }
+}
+.dark {
+    transition: .5s;
+    background-color: $darkBg;
+    color: $lightText;
+    a {
+        color: $lightText;
+        &:hover {
+            color: $lightText;
+        }
+        &::after {
+            background-color: $lightText!important;
+        }
+    }
+    #menu {
+        background-color: $darkBg;
+        a {
+            &::after {
+                background-color: $blobColor!important;
+            }
+        }
+    }
+    #work {
+        background-color: $darkBg;
     }
 }
 .container {
@@ -355,8 +381,10 @@ a {
             img {
                 width: 65px;
                 margin-right: 30px;
+                margin-bottom: 8px;
                 @media (max-width: 768px) {
                     margin-right: 0;
+                    margin-bottom: 0;
                 }
             }
         }

@@ -40,7 +40,9 @@
   font-weight: 700;
 }
 
-body {
+.light {
+  -webkit-transition: .5s;
+  transition: .5s;
   font-family: 'Univers LT', serif;
   background-color: #f6f6fa;
   color: #1c1c20;
@@ -49,9 +51,40 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
+  .light {
     font-size: 16px;
   }
+}
+
+.dark {
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #101012;
+  color: #fff;
+}
+
+.dark a {
+  color: #fff;
+}
+
+.dark a:hover {
+  color: #fff;
+}
+
+.dark a::after {
+  background-color: #fff !important;
+}
+
+.dark #menu {
+  background-color: #101012;
+}
+
+.dark #menu a::after {
+  background-color: #0055fe !important;
+}
+
+.dark #work {
+  background-color: #101012;
 }
 
 .container {
@@ -201,11 +234,13 @@ a:hover {
 .navigation .logo-switch .logo img {
   width: 65px;
   margin-right: 30px;
+  margin-bottom: 8px;
 }
 
 @media (max-width: 768px) {
   .navigation .logo-switch .logo img {
     margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -903,10 +938,10 @@ header .point {
   z-index: -1;
   top: 0;
   left: 0;
-  right: 10px;
+  right: 25px;
   bottom: 0;
   background: #e3ecff;
-  border-radius: 50px;
+  border-radius: 50px 0 0 50px;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
@@ -1054,10 +1089,10 @@ header .point {
   z-index: -1;
   top: 0;
   left: 0;
-  right: 10px;
+  right: 25px;
   bottom: 0;
   background: #e3ecff;
-  border-radius: 50px;
+  border-radius: 50px 0 0 50px;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
@@ -1532,10 +1567,10 @@ form .btn-submit::before {
   z-index: -1;
   top: 0;
   left: 0;
-  right: 10px;
+  right: 25px;
   bottom: 0;
   background: #e3ecff;
-  border-radius: 50px;
+  border-radius: 50px 0 0 50px;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
