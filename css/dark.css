@@ -420,6 +420,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 header .row {
@@ -724,6 +726,11 @@ header .point {
 }
 
 /*--- work ---*/
+#work {
+  overflow: hidden;
+  position: relative;
+}
+
 #work .work-desc h2 {
   font-family: 'Gotham Pro', serif;
   font-size: 120px;
@@ -989,6 +996,7 @@ header .point {
 
 #getStart {
   overflow: hidden;
+  position: relative;
 }
 
 @media (max-width: 768px) {

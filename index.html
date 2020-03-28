@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link id="style" rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/my-animate.css">
     <link rel="stylesheet" href="css/blob.css">
     <title>Ideo - интернет-маркетинг и разработка сайтов</title>
 </head>
@@ -56,16 +57,16 @@
                     <p class="wow fadeInUp" data-wow-delay="2s">Сайтостроение, креатив, <br>стратегия, реклама.</p>
                 </div>
                 <div class="hero-img">
-                    <img src="img/David.png" alt="Давид" class="david">
-                    <img src="img/delorian.png" alt="Машина времени" class="delorian wow slideInLeft delay-2s">
-                    <img src="img/dron.png" alt="Дрон" class="dron wow fadeInRight delay-3s">
-                    <img src="img/RoboHand-i-babochka.png" alt="Рука робота и бабочка" class="hand-bat">
-                    <img src="img/RoboHeart.png" alt="Серце робота" class="rob-heart wow pulse infinite">
-                    <img src="img/lupa.png" alt="Лупа" class="lupa wow fadeIn delay-1s">
-                    <img src="img/nlo.png" alt="НЛО" class="nlo wow fadeInUp delay-4s">
+                    <img src="img/David.png" alt="Давид" class="david wow fadeInUp faster">
+                    <img src="img/delorian.png" alt="Машина времени" class="delorian wow fadeInUp faster" data-wow-delay="0.1s">
+                    <img src="img/dron.png" alt="Дрон" class="dron wow fadeInUp faster" data-wow-delay="0.2s">
+                    <img src="img/RoboHand-i-babochka.png" alt="Рука робота и бабочка" class="hand-bat wow fadeInUp faster" data-wow-delay="0.2s">
+                    <img src="img/RoboHeart.png" alt="Серце робота" class="rob-heart wow fadeIn fasterUp" data-wow-delay="0.3s">
+                    <img src="img/lupa.png" alt="Лупа" class="lupa wow fadeInUp faster" data-wow-delay="0.4s">
+                    <img src="img/nlo.png" alt="НЛО" class="nlo wow fadeInUp faster" data-wow-delay="0.5s">
                     <img src="img/planeta.png" alt="Планета Земля" class="planeta">
-                    <img src="img/tiranozavr.png" alt="Тиранозавр" class="zavr wow slideInLeft">
-                    <img src="img/cklock.png" alt="Часы карманные" class="clock">
+                    <img src="img/tiranozavr.png" alt="Тиранозавр" class="zavr wow fadeInUp faster" data-wow-delay="0.6s">
+                    <img src="img/cklock.png" alt="Часы карманные" class="clock wow fadeInUp faster" data-wow-delay="0.7s">
                 </div>
             </div>
         </div>
@@ -178,11 +179,9 @@
             </div>
         </div>
     </section>
-    <section id="idea" class="parallax">
-        <div class="parallax-layer parallax-text">
-            <p class="runline">есть крутая идея?</p>
-        </div>
-    </section>
+    <!-- <div id="parallax" class="parallax-text">
+        <span id="span">есть крутая идея?</span>
+    </div> -->
     <section id="getStart">
         <div class="container">
             <div class="row">
@@ -192,16 +191,16 @@
                     <a href="#" class="button hoverable wow fadeInUp" data-wow-offset="200" target="_blank">Начать проект! <img src="img/add.png" alt=""></a>
                 </div>
                 <div class="col-lg-4 images">
-                    <img src="img/chertezhi.png" alt="" class="chertezhi wow fadeInUp">
-                    <img src="img/fly-mountain.png" alt="" class="mountain wow fadeInUp">
-                    <img src="img/piramida.png" alt="" class="piramida wow fadeInUp">
-                    <img src="img/kit.png" alt="" class="kit wow fadeInUp">
-                    <img src="img/lego-1.png" alt="" class="lego-1 wow fadeInUp">
-                    <img src="img/lego-2.png" alt="" class="lego-2 wow fadeInUp">
-                    <img src="img/RoboHand.png" alt="" class="rob-hand wow fadeInUp">
-                    <img src="img/ManHand.png" alt="" class="man-hand wow fadeInUp">
-                    <img src="img/enot-i-veyder.png" alt="" class="enot-veyder wow fadeInUp">
-                    <img src="img/transportir.png" alt="" class="transportir wow fadeInUp">
+                    <img src="img/chertezhi.png" alt="" class="chertezhi wow fadeInUp faster">
+                    <img src="img/fly-mountain.png" alt="" class="mountain wow fadeInUp faster" data-wow-delay="0.1s">
+                    <img src="img/piramida.png" alt="" class="piramida wow fadeInUp faster" data-wow-delay="0.2s">
+                    <img src="img/kit.png" alt="" class="kit wow fadeInUp faster" data-wow-delay="0.3s">
+                    <img src="img/lego-1.png" alt="" class="lego-1">
+                    <img src="img/lego-2.png" alt="" class="lego-2">
+                    <img src="img/RoboHand.png" alt="" class="rob-hand wow fadeInUp faster" data-wow-delay="0.6s">
+                    <img src="img/ManHand.png" alt="" class="man-hand wow fadeInUp faster" data-wow-delay="0.7s">
+                    <img src="img/enot-i-veyder.png" alt="" class="enot-veyder wow fadeInUp faster" data-wow-delay="0.8s">
+                    <img src="img/transportir.png" alt="" class="transportir wow fadeInUp faster" data-wow-delay="0.9s">
                 </div>
             </div>
         </div>
@@ -283,21 +282,23 @@
     </footer>
     <div class="js-pointer pointer">
         <div class="pointer__circle"></div>
-   </div>
+    </div>
    
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slow_scroll.js"></script>
     <script src="js/switchTheme.js"></script>
+    <script src="js/parallax.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
-        new WOW(
-            {
-                boxClass: 'wow',
-                animateClass: 'animated',
-                mobile: false,
-            }
-        ).init();
+        wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 200,
+            // mobile: false,
+            live: true
+        })
+        wow.init();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="js/pointer.js"></script>

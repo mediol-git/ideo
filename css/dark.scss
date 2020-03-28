@@ -470,6 +470,8 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
     .row {
         position: relative;
         @media (max-width: 768px) {
@@ -661,6 +663,8 @@ header {
 
 /*--- work ---*/
 #work {
+    overflow: hidden;
+    position: relative;
     .work-desc {
         h2 {
             @include secTitle(120px, 100px);
@@ -794,6 +798,7 @@ header {
 }
 #getStart {
     overflow: hidden;
+    position: relative;
     @media (max-width: 768px) {
         padding-top: 40px;
     }
