@@ -11,15 +11,13 @@
     <link rel="stylesheet" href="css/blobs.css">
     <title>Ideo - напишите нам</title>
 </head>
-<body>
+<body class="light">
     <nav class="navigation">
         <div class="container">
             <div class="logo-switch">
-                <div class="logo">
-                    <img src="img/logo_black.png" alt="">
-                </div>
+                <div class="logo"></div>
                 <div class="switch">
-                    <input type="checkbox" name="" id="" class="hoverable">
+                    <input type="checkbox" id="checkbox" class="checkbox hoverable">
                 </div>
             </div>
             <div class="link-menu">
@@ -184,6 +182,11 @@
                         <h3>Расскажите нам больше</h3>
                         <textarea rows="9" placeholder="Сообщение"></textarea>
                     </div>
+                    <div class="form-group dropLoad">
+                        <div id="dropZone">
+                            Для загрузки, перетащите файл сюда.
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-submit hoverable">Отправить <img src="img/plus.svg" alt=""></button>
                 </form>
             </div>
@@ -197,9 +200,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 foot-logo">
-                    <img src="img/logo_black.png" alt="">
-                </div>
+                <div class="col-lg-4 foot-logo"></div>
                 <div class="col-lg-4 foot-menu">
                     <ul>
                         <a href="#" class="hoverable"><li>Behance</li></a>
@@ -224,6 +225,7 @@
    </div>
    
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/switch.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slow_scroll.js"></script>
     <script src="js/wow.min.js"></script>

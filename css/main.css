@@ -75,6 +75,10 @@
   background-color: #fff !important;
 }
 
+.dark .logo, .dark .foot-logo {
+  background-image: url(../img/logo_white.png) !important;
+}
+
 .dark #menu {
   background-color: #101012;
 }
@@ -85,6 +89,10 @@
 
 .dark #work {
   background-color: #101012;
+}
+
+.dark .button::before {
+  background: #1c1c20;
 }
 
 .container {
@@ -225,22 +233,20 @@ a:hover {
   }
 }
 
+.navigation .logo-switch .logo {
+  width: 65px;
+  height: 30px;
+  margin-right: 30px;
+  margin-bottom: 8px;
+  background-image: url(../img/logo_black.png);
+  background-size: cover;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 @media (max-width: 768px) {
   .navigation .logo-switch .logo {
     margin-bottom: 20px;
-  }
-}
-
-.navigation .logo-switch .logo img {
-  width: 65px;
-  margin-right: 30px;
-  margin-bottom: 8px;
-}
-
-@media (max-width: 768px) {
-  .navigation .logo-switch .logo img {
-    margin-right: 0;
-    margin-bottom: 0;
   }
 }
 
@@ -268,7 +274,7 @@ a:hover {
 }
 
 .navigation .logo-switch .switch input[type="checkbox"]:checked {
-  background-color: #101012;
+  background-color: #1c1c20;
 }
 
 .navigation .logo-switch .switch input[type="checkbox"]::before {
@@ -279,7 +285,7 @@ a:hover {
   border-radius: 20px;
   top: 0;
   left: 2px;
-  background-color: #101012;
+  background-color: #1c1c20;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transform: scale(0.8);
@@ -1545,6 +1551,31 @@ form textarea {
   background-color: #e8edfa;
 }
 
+form .dropLoad #dropZone {
+  color: #1c1c20;
+  font-size: 20px;
+  text-align: center;
+  padding: 50px 0;
+  margin: 50px auto;
+  background: #e8edfa;
+  border: 1px dashed #aeaeae;
+}
+
+form .dropLoad #dropZone.hover {
+  background: #ddd;
+  border-color: #aaa;
+}
+
+form .dropLoad #dropZone.error {
+  background: #faa;
+  border-color: #f00;
+}
+
+form .dropLoad #dropZone.drop {
+  background: #afa;
+  border-color: #0f0;
+}
+
 form .btn-submit {
   padding: 0;
   margin-top: 50px;
@@ -1651,22 +1682,17 @@ footer .container .copyright {
 
 footer .foot-logo {
   padding: 0;
+  height: 60px;
+  background-image: url(../img/logo_black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media (max-width: 768px) {
   footer .foot-logo {
     padding: 0 15px;
-  }
-}
-
-footer .foot-logo img {
-  width: 135px;
-}
-
-@media (max-width: 768px) {
-  footer .foot-logo img {
-    width: 90px;
-    margin-bottom: 15px;
   }
 }
 
