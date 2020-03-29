@@ -92,7 +92,19 @@
 }
 
 .dark .button::before {
-  background: #1c1c20;
+  background: #2a2a2c !important;
+}
+
+.dark .btn-submit {
+  color: #fff;
+}
+
+.dark .btn-submit::before {
+  background: #2a2a2c !important;
+}
+
+.dark footer {
+  border-top: 2px solid rgba(64, 64, 65, 0.2);
 }
 
 .container {
@@ -974,6 +986,8 @@ header .point {
   width: 50px;
   margin-left: 25px;
   position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media (max-width: 425px) {
@@ -1125,6 +1139,8 @@ header .point {
   width: 50px;
   margin-left: 25px;
   position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media (max-width: 425px) {
@@ -1628,6 +1644,8 @@ form .btn-submit img {
   width: 50px;
   margin-left: 25px;
   position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media (max-width: 425px) {

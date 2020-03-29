@@ -106,6 +106,7 @@ $bdColor: #cacace;
         width: 50px;
         margin-left: 25px;
         position: relative;
+        transition: .3s;
     }
     @media (max-width: 425px) {
         font-size: 16px;
@@ -284,8 +285,17 @@ $bdColor: #cacace;
     }
     .button {
         &::before {
-            background: $darkText;
+            background: #2a2a2c!important;
         }
+    }
+    .btn-submit {
+        color: $lightText;
+        &::before {
+            background: #2a2a2c!important;
+        }
+    }
+    footer {
+        border-top: 2px solid rgba(64,64,65,.2);
     }
 }
 .container {
