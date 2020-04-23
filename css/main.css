@@ -1387,6 +1387,12 @@ form .personal-info input {
   background: transparent;
   padding: 15px 0;
   margin-bottom: 50px;
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }
 
 form .personal-info input::-webkit-input-placeholder {
@@ -1455,17 +1461,35 @@ form .range {
   margin-bottom: 50px;
 }
 
+form .range .time-value p img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
 form .range input[type=range] {
   -webkit-appearance: none;
   background-color: transparent;
   margin-bottom: 35px;
   width: 96%;
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }
 
 form .range input[type=range]::-webkit-slider-runnable-track {
   border-radius: 10px;
   height: 5px;
   background-color: #cacace;
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }
 
 form .range input[type=range]::-webkit-slider-thumb {
@@ -1479,12 +1503,23 @@ form .range input[type=range]::-webkit-slider-thumb {
   border-radius: 50px;
   cursor: pointer;
   margin-top: -15px;
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }
 
 form .range input[type=range]::-moz-range-track {
   border-radius: 10px;
   height: 5px;
   background-color: #cacace;
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }
 
 form .range input[type=range]::-moz-range-thumb {
@@ -1497,6 +1532,11 @@ form .range input[type=range]::-moz-range-thumb {
   border-radius: 50px;
   cursor: pointer;
   margin-top: -15px;
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }
 
 form .range .form-check {
@@ -1565,6 +1605,21 @@ form textarea {
   font-size: 20px;
   padding: 40px 50px;
   background-color: #e8edfa;
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+}
+
+form .dropLoad {
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }
 
 form .dropLoad #dropZone {
