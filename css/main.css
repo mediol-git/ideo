@@ -655,8 +655,7 @@ header .hero-img .planeta {
   -o-animation-duration: 10s, 0.3s;
   -o-animation-iteration-count: infinite, 1;
   -o-animation-timing-function: linear, ease-in;
-  -webkit-animation-name: rotation, slideInUp;
-          animation-name: rotation, slideInUp;
+  animation-name: rotation, fadeInUp;
   animation-duration: 10s, 0.3s;
   animation-iteration-count: infinite, 1;
   animation-timing-function: linear, ease-in;
@@ -1257,8 +1256,7 @@ header .point {
   -o-animation-duration: 10s, 0.3s;
   -o-animation-iteration-count: infinite, 1;
   -o-animation-timing-function: linear, ease-in;
-  -webkit-animation-name: rotation, slideInUp;
-          animation-name: rotation, slideInUp;
+  animation-name: rotation, fadeInUp;
   animation-duration: 10s, 0.3s;
   animation-iteration-count: infinite, 1;
   animation-timing-function: linear, ease-in;
@@ -1302,8 +1300,7 @@ header .point {
   -o-animation-duration: 10s, 0.3s;
   -o-animation-iteration-count: infinite, 1;
   -o-animation-timing-function: linear, ease-in;
-  -webkit-animation-name: rotation, slideInUp;
-          animation-name: rotation, slideInUp;
+  animation-name: rotation, fadeInUp;
   animation-duration: 10s, 0.3s;
   animation-iteration-count: infinite, 1;
   animation-timing-function: linear, ease-in;
