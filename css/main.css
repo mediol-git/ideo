@@ -859,6 +859,16 @@ header .point {
   }
 }
 
+#work .work-row .work-item:last-child .work-info {
+  padding-top: 35%;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#work .work-row .work-item:last-child .work-info h3 {
+  text-align: center;
+  color: #1c1c20;
+}
+
 #work .work-row .work-item img {
   -webkit-transition: 500ms;
   transition: 500ms;

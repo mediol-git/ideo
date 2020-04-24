@@ -762,6 +762,16 @@ header {
                     margin-bottom: 40px;
                 }
             }
+            &:last-child {
+                .work-info {
+                    padding-top: 35%;
+                    background-color: rgba(255,255,255,.7)!important;
+                    h3 {
+                        text-align: center;
+                        color: $darkText;
+                    }
+                }
+            }
             img {
                 transition: 500ms;
             }
