@@ -132,7 +132,7 @@ h1 {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 43px;
+    font-size: 43px !important;
     line-height: 48px;
   }
 }
@@ -1360,8 +1360,20 @@ header .point {
   max-width: 1024px;
 }
 
+@media (max-width: 425px) {
+  #contacts .title {
+    text-align: center !important;
+  }
+}
+
 #contacts .row {
   padding-bottom: 50px;
+}
+
+@media (max-width: 425px) {
+  #contacts .row {
+    margin-left: 0;
+  }
 }
 
 #contacts .row h1 {
@@ -1378,6 +1390,30 @@ header .point {
           flex-flow: column;
   font-size: 20px;
   line-height: 30px;
+}
+
+#contacts .row .contact-info p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@media (max-width: 425px) {
+  #contacts .row .contact-info p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  #contacts .label {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  #contacts .label .hidden {
+    display: none;
+  }
 }
 
 form h3 {

@@ -315,7 +315,7 @@ h1 {
     font-weight: 900;
     line-height: 115px;
     @media (max-width: 768px) {
-        font-size: 43px;
+        font-size: 43px!important;
         line-height: 48px;
     }
 }
@@ -1051,8 +1051,16 @@ header {
         max-width: 1024px;
     }
     padding-top: 150px;
+    .title {
+        @media (max-width: 425px) {
+            text-align: center!important;   
+        }
+    }
     .row {
         padding-bottom: 50px;
+        @media (max-width: 425px) {
+            margin-left: 0;
+        }
         h1 {
             font-size: 120px;
         }
@@ -1061,6 +1069,24 @@ header {
             flex-flow: column;
             font-size: 20px;
             line-height: 30px;
+            p {
+                margin-bottom: 0;
+                text-align: center;
+                @media (max-width: 425px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .label {
+        @media (max-width: 425px) {
+            font-size: 20px;
+            text-align: center;    
+        }
+        .hidden {
+            @media (max-width: 425px) {
+                display: none;   
+            }
         }
     }
 }
