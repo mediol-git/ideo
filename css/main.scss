@@ -245,6 +245,9 @@ $bdColor: #cacace;
 }
 
 //Main styles
+body {
+    overflow-x: hidden;
+}
 .light {
     transition: .5s;
     font-family: 'Univers LT', serif;
@@ -553,6 +556,9 @@ header {
         img {
             position: absolute;
             max-width: 100%;
+        }
+        .img-wrapper {
+            position: relative;
         }
         .lupa {
             z-index: 99;

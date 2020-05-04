@@ -40,6 +40,10 @@
   font-weight: 700;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .light {
   -webkit-transition: .5s;
   transition: .5s;
@@ -537,6 +541,10 @@ header .hero-img {
 header .hero-img img {
   position: absolute;
   max-width: 100%;
+}
+
+header .hero-img .img-wrapper {
+  position: relative;
 }
 
 header .hero-img .lupa {
