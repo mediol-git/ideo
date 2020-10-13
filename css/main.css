@@ -136,8 +136,10 @@ h1 {
 
 @media (max-width: 768px) {
   h1 {
+    position: relative;
     font-size: 43px !important;
     line-height: 48px;
+    z-index: 999;
   }
 }
 

@@ -318,8 +318,10 @@ h1 {
     font-weight: 900;
     line-height: 115px;
     @media (max-width: 768px) {
+        position: relative;
         font-size: 43px!important;
         line-height: 48px;
+        z-index: 999;
     }
 }
 a {
